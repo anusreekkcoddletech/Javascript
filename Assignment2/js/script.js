@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+
+/* eslint-disable semi */
+
+/* eslint-disable quotes */
+
 let arr = ["1", "2", "3", "4", "5", "6", "7"]
 
 // a. Remove number "6" from the array and console the length of the array.
