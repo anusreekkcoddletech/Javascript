@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+
+/* eslint-disable semi */
+
+/* eslint-disable quotes */
+
 //1. ['car', 1, 5, 'js', 'node js', 'mysql', 'sql' ] : Use switch statement inside a map function and 
 // console each item by using switch statement.
 
