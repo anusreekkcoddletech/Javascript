@@ -13,10 +13,6 @@ button{
     border: 2px sloid brown;
     margin: 10px;
 }
-.submitbutton{
-    border: 4px solid gray;
-    margin-left: 12%;
-}
 #message{
     display: none;
 }
