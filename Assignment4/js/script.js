@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+
+/* eslint-disable semi */
+
+/* eslint-disable quotes */
+
 // 1.Write a function to 
 
 // a. Calculate the height of the end user's browser screen
