@@ -191,8 +191,8 @@ titleForm.addEventListener("submit", function(event) {
 
 // 9. When the control+enter key is pressed show an alert message. 
 
-document.addEventListener("keydown", function(event) {
-    if (event.ctrlKey && event.key === "Enter") {
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "Enter") {
         alert("Control+Enter key is pressed")
     }
 })
