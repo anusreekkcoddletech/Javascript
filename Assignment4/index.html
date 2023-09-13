@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Basic Details Form</h1>
+    <form id="basicDetailsForm">
+        <label for="name">Name:&nbsp;</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="age">Age:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="number" id="age" name="age"><br><br>
+        
+        <input type="submit" value="Submit" class="submitbutton">
+        </form>
+        <form id="personalDetails">
+            <label for="name">Fullname:&nbsp;&nbsp;</label>
+            <input type="text" id="fname" name="name"><br><br>
+            
+            <label for="email">Email:&nbsp; &nbsp;&nbsp;&nbsp;</label>
+            <input type="email" id="emailaddress" name="email"><br><br>
+            
+            <label for="age">Place:&nbsp;&nbsp;</label>
+            <input type="text" id="currentplace" name="place"><br><br>
+            
+            <input type="submit" value="Submit" class="submitbutton2">
+            </form>
+        <div id="redDiv">
+            <div class="details">
+                <p>Name : Anusree</p>
+                <p>Age : 23</p>
+                <p>Place : Calicut</p>
+            </div>
+        </div> 
+        <button id="hideButton">Hide Div</button>   
+        <button id="colorchangebutton">Color change</button>
+        <button id="showdata">Show details</button><br>
+        <select id="numberSelect" onchange="checkSelection()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <div id="message"></div>
+        <div class="buttonDiv">
+            <p class="text"></p>
+        </div>
+        <form id="titleForm">
+        <div id="output"></div>
+        <label for="pageTitle">Enter new tab title (up to 50 characters):</label>
+        <input type="text" id="pageTitle">
+        <button type="submit">Change Title</button>
+        </form>
+</body>
+<script src="js/script.js"></script>
+</html>
