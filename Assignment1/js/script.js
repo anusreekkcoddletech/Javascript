@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+
+/* eslint-disable semi */
+
+/* eslint-disable quotes */
+
 // Create variables with different data types available in JS and print their data types along with each variable name in the console. 
 const stringVariable = "This is a variable"
 const numberVariable = 42

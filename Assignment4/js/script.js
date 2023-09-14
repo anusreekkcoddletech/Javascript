@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+
+/* eslint-disable semi */
+
+/* eslint-disable quotes */
+
 // 1.Write a function to 
 
 // a. Calculate the height of the end user's browser screen
@@ -191,8 +197,8 @@ titleForm.addEventListener("submit", function(event) {
 
 // 9. When the control+enter key is pressed show an alert message. 
 
-document.addEventListener("keydown", function(event) {
-    if (event.ctrlKey && event.key === "Enter") {
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && e.key === "Enter") {
         alert("Control+Enter key is pressed")
     }
 })
