@@ -1,0 +1,19 @@
+Step 1 : First added the given rules in js file.
+Step 2 : Solved the indentation error.
+Step 3 : Changed the selectedIndex variable declaration  as let.
+Step 4 : Made the script src as src="js/slider.js"
+step 5 : Made the javascript link code position as after closing of body tag.
+Step 6 : Changed the id name as img to imgs
+Step 7 : Corrected the spelling mistake document.getElementsById as document.getElementById
+Step 8 : Changed the index value 0 and 1 as string to number 
+Step 9 : Set the condition as 
+         if (selectedIndex < 0) then,
+            selectedIndex = a.length - 1
+Step 10: Set the condition as
+         if (selectedIndex >= a.length) then,
+            selectedIndex = 0
+
+
+
+
+
