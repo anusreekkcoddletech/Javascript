@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #15bdac;
+}
+#main_row {
+    width: 22%; 
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+  }
+
+  .column {
+    width: 100px;
+    height: 112px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    cursor: pointer;
+  }
+#resetbutton{
+    height:100%;
+    width: 80%;
+    background-color: black;
+    color: #15bdac;
+    box-shadow: 2px 2px 2px #bb3f3f;
+}
