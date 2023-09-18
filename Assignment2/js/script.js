@@ -58,14 +58,17 @@ for(let i = 0 ; i < arr.length ; i++){
 
 // g. [1, 2, "3", 4, 5, 6,"7"]  Compare this array with the above given array and console only if both items of the array have same data type. (Compare each item of this array with each item of the other array)
 
+let arr1 = ["1", "2", "3", "4", "5", "6", "7"];
+let arr2 = [1, 2, "3", 4, 5, 6, "7"];
 
-arr = ["1", "2", "3", "4", "5", "6", "7"]
-let arr1 = [1, 2, "3", 4, 5, 6, "7"]
-for (let i = 0; i < arr.length; i++) {
-    let item1 = arr[i]
-    let item2 = arr1[i]
-    if (typeof item1 === typeof item2) {
-        console.log("The item in array1: "+item1+" is equal to the item in array2:"+ item2)
+for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+        let item1 = arr1[i];
+        let item2 = arr2[j];
+        
+        if (typeof item1 === typeof item2) {
+            console.log("The item in array1: " + item1 + " is equal to the item in array2: " + item2);
+        }
     }
 }
 
