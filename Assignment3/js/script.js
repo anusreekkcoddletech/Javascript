@@ -41,8 +41,6 @@ function Arrayelements(arr) {
         for (let i = 0; i < this.arr.length; i++) {
             console.log(this.arr[i])
         }
-    }
-}
 const elements = new Arrayelements(arr)
 elements.printelements()
 
