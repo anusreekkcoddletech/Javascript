@@ -35,18 +35,16 @@ console.log(indexdelete(arr1, 2, 5))
 //3. Use constructor method to console all elements of the passed array. (the array will be passed to the
 // constructor method)
 
-arr1 = [1, 2, 3, 4, 5, 6]
-const printarr= new printarray(arr)
-function printarray(input) {
-    this.PrintElements = function ()
-    {
-        for (let i = 0; i < input.length; i++)
-        {
-            console.log(input[i])
+function Arrayelements(arr) {
+    this.arr = arr
+    this.printelements = function() {
+        for (let i = 0; i < this.arr.length; i++) {
+            console.log(this.arr[i])
         }
     }
 }
-printarr.PrintElements()
+const elements = new Arrayelements(arr)
+elements.printelements()
 
 //4. Create a function that takes 2 arguments, 1st argument being any array of items, 2nd being any one
 // of the item name either in the passed array or not in the passed array, the function should delete the 
@@ -113,7 +111,12 @@ console.log(string.split(" "))
 
 // h) Extract and print the words "is the King" from string. 
 
-console.log(string.substring(11, 23))
+var selectedwords = string.match("is the King")
+if (selectedwords) {
+    console.log(selectedwords[0])
+} else {
+    console.log("Words 'is the King' not found in the string.");
+}
 
 // i) Get the count of occurrences of the strings "the" and "of" in string. 
 
