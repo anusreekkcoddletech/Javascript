@@ -58,7 +58,7 @@ function arrayOperation(arr1, item) {
     }
     console.log(arr1)
 }
-arrayOperation(arr1, 7);
+arrayOperation(arr1, 7)
 
 //5. Create a self-invoking function to console you name.
 
