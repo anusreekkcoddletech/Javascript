@@ -34,61 +34,55 @@ checkProtocol()
 // d. To show an alert message after 10sec while the page is refreshed.
 
 function refreshAlert() {
-    setTimeout(function() {
+    setTimeout(function () {
         alert("It has been 10 seconds since the page was refreshed.")
     }, 10000)
 }
 refreshAlert()
-  
+
 //2. Store your basic details in local storage of the browser every time the page loads, then console them and finally delete them after 1 minute of the page load. 
 
-let userName = document.getElementById("name")
-let email = document.getElementById("email")
-let age = document.getElementById("age")
-let submitbutton = document.querySelector(".submitbutton")
-submitbutton.addEventListener("click", storeBasicDetails)
-function storeBasicDetails(){ 
-    localStorage.setItem("userName",userName.value)
-    localStorage.setItem("email",email.value)
-    localStorage.setItem("age",age.value)
+function storeDetails() {
+    var Name = "Anusree";
+    var Email = "anu@gmail.com";
+    var Place = "Calicut";
 
-}
-console.log("username : " + localStorage.getItem("userName"))
-console.log("email : " + localStorage.getItem("email"))
-console.log("age : " + localStorage.getItem("age"))
+    localStorage.setItem("name", Name);
+    localStorage.setItem("email", Email);
+    localStorage.setItem("place", Place);
 
-function deleteDetails() {
-    localStorage.removeItem("userName")
-    localStorage.removeItem("email")
-    localStorage.removeItem("age")
+    console.log("Name: " + Name);
+    console.log("Email: " + Email);
+    console.log("Place: " + Place);
+
+    setTimeout(function () {
+        localStorage.removeItem("name"); 
+        localStorage.removeItem("email"); 
+        localStorage.removeItem("place");
+    }, 60000);
 }
-setTimeout(deleteDetails, 60000)
+
+storeDetails();
+
 
 //3. Create a form and submit button, on click of the button store your basic details from the form in the cookies.
 
-let fullname = document.getElementById("fname")
-let emailaddress = document.getElementById("emailaddress")
-let currentplace = document.getElementById("currentplace")
+document.getElementById("personalDetails").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-let submitbutton2 = document.querySelector(".submitbutton2")
-submitbutton2.addEventListener("click", personalDetails)
-function personalDetails() {
-    setCookie("fullname", fullname.value, 365)
-    setCookie("emailaddress", emailaddress.value, 365)
-    setCookie("currentplace", currentplace.value, 365)
-}
+    var name = document.getElementById("fname").value;
+    var email = document.getElementById("emailaddress").value;
+    var place = document.getElementById("currentplace").value;
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date()
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))
-    const expires = "expires=" + d.toUTCString()
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
-}
+    document.cookie = "name=" + name
+    document.cookie = "email=" + email
+    document.cookie = "place=" + place
+    document.getElementById("personalDetails").reset();
+});
 
 // 4. Redirect to the homepage of google from the console.
 
-console.log( "https://www.google.com")
-
+console.log("https://www.google.com")
 
 // 5.Create a div with background color red, create buttons
 
@@ -96,7 +90,7 @@ console.log( "https://www.google.com")
 
 const hideButton = document.getElementById("hideButton")
 let redDiv = document.getElementById("redDiv")
-hideButton.addEventListener("click", function(e) {
+hideButton.addEventListener("click", function (e) {
     e.preventDefault()
     redDiv.style.display = "none"
 })
@@ -105,7 +99,7 @@ hideButton.addEventListener("click", function(e) {
 
 const colorchangebutton = document.getElementById("colorchangebutton")
 redDiv = document.getElementById("redDiv")
-colorchangebutton.addEventListener("click", function(e) {
+colorchangebutton.addEventListener("click", function (e) {
     e.preventDefault()
     redDiv.style.backgroundColor = "pink"
 })
@@ -113,13 +107,13 @@ colorchangebutton.addEventListener("click", function(e) {
 // c. To show your basic details on the div, the details should hide/show, on the click.
 
 
-document.getElementById("showdata").addEventListener("click", function(e) {
+document.getElementById("showdata").addEventListener("click", function (e) {
     e.preventDefault()
     let details = document.querySelector(".details")
     if (details.style.display === "none") {
         details.style.display = "block"
     }
-    else{
+    else {
         details.style.display = "none"
     }
 })
@@ -145,10 +139,10 @@ function checkSelection() {
 }
 
 message.onmouseenter = function () {
-    message.style.backgroundColor = "yellow" 
+    message.style.backgroundColor = "yellow"
 }
 message.onmouseout = function () {
-    message.style.backgroundColor = "" 
+    message.style.backgroundColor = ""
 }
 checkSelection()
 
@@ -169,11 +163,11 @@ const languages = [
 ]
 let buttonDiv = document.querySelector(".buttonDiv")
 let text = document.querySelector(".text")
-for(let i=0;i<languages.length;i++){
+for (let i = 0; i < languages.length; i++) {
     let button = document.createElement("button")
     buttonDiv.append(button)
     button.innerHTML = languages[i]
-    button.addEventListener("click",function(e){
+    button.addEventListener("click", function (e) {
         e.preventDefault()
         text.innerHTML = languages[i]
     })
@@ -185,8 +179,8 @@ for(let i=0;i<languages.length;i++){
 
 const titleForm = document.getElementById("titleForm")
 const pageTitleInput = document.getElementById("pageTitle")
-titleForm.addEventListener("submit", function(event) {
-    event.preventDefault()     
+titleForm.addEventListener("submit", function (event) {
+    event.preventDefault()
     const newTitle = pageTitleInput.value.trim()
     if (newTitle.length < 50) {
         document.title = newTitle
@@ -197,7 +191,7 @@ titleForm.addEventListener("submit", function(event) {
 
 // 9. When the control+enter key is pressed show an alert message. 
 
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
     if (e.ctrlKey && e.key === "Enter") {
         alert("Control+Enter key is pressed")
     }
