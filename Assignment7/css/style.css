@@ -25,6 +25,8 @@ body {
 .column9 {
   border: 1px solid black;
   cursor: pointer;
+  height: 30%;
+  width: 30%;
   text-align: center;
   padding: 30%;
 }
